@@ -66,28 +66,28 @@
 </head>
 <body class="font-sans mesh-gradient min-h-screen">
     <!-- BEGIN: Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center border-b border-white/5 bg-black/80 backdrop-blur-md">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-brand rounded-custom rotate-45 flex items-center justify-center">
-                <span class="text-black font-bold -rotate-45">HG</span>
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center w-full">
+            <a class="flex items-center gap-3" href="#">
+                <img src="assets/HotGear_Logo.svg" alt="HotGear Logo" class="h-8 md:h-9 w-auto">
+                <span class="text-lg md:text-xl font-bold tracking-tighter uppercase">HOT<span class="text-brand">GEAR</span></span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
+                <a class="hover:text-brand transition-colors" href="#">Catálogo</a>
+                <a class="hover:text-brand transition-colors" href="#">Proyectos</a>
+                <a class="hover:text-brand transition-colors" href="#contacto">Contacto</a>
             </div>
-            <span class="text-xl font-bold tracking-tighter uppercase">HOT<span class="text-brand">GEAR</span></span>
+            <button class="px-3 py-1.5 md:px-5 md:py-2 bg-brand text-black font-bold rounded-custom hover:bg-brand-light transition-all text-[10px] md:text-xs uppercase tracking-widest">
+                Cotizar Ahora
+            </button>
         </div>
-        <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
-            <a class="hover:text-brand transition-colors" href="#">Catálogo</a>
-            <a class="hover:text-brand transition-colors" href="#">Proyectos</a>
-            <a class="hover:text-brand transition-colors" href="#contacto">Contacto</a>
-        </div>
-        <button class="px-5 py-2 bg-brand text-black font-bold rounded-custom hover:bg-brand-light transition-all text-xs uppercase tracking-widest">
-            Cotizar Ahora
-        </button>
     </nav>
     <!-- END: Navigation -->
 
     <!-- BEGIN: Hero Section -->
     <header class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
         <div class="relative z-10">
-            <h1 class="text-6xl md:text-8xl font-bold leading-none mb-6">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold leading-none mb-6">
                 POTENCIA <br />
                 <span class="text-transparent border-b-4 border-brand italic" style="-webkit-text-stroke: 1px rgb(255, 140, 0);">INDUSTRIAL</span><br />
                 COSTA CARIBE
@@ -163,10 +163,10 @@
 
             <!-- Category: Compactación (Offset Card) -->
             <section class="md:col-span-12 group mt-8" data-purpose="category-card">
-                <div class="glass-card p-10 rounded-custom grid md:grid-cols-2 items-center gap-10">
+                <div class="glass-card p-6 sm:p-10 rounded-custom grid md:grid-cols-2 items-center gap-6 md:gap-10">
                     <div>
-                        <h2 class="text-5xl font-bold mb-4 tracking-tighter italic">Equipos de Compactación</h2>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
+                        <h2 class="text-3xl sm:text-5xl font-bold mb-4 tracking-tighter italic">Equipos de Compactación</h2>
+                        <p class="text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
                             Vibrocompactadores de rodillo liso y pata de cabra para preparación de terrenos costeros. Tecnología de alta eficiencia en compactación de suelos.
                         </p>
                         <div class="flex flex-wrap gap-3">
@@ -175,8 +175,8 @@
                             <span class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">CASE</span>
                         </div>
                     </div>
-                    <div class="relative h-64 overflow-hidden rounded-custom bg-black/40 border border-white/5 group-hover:border-brand/40 transition-colors">
-                        <img alt="Compactación Detail" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoRiVrAXk_AnkdIycPelk9xsMmRxllXiGq0iZOKFH9enjCeoqVBtCcn0p_qzT0TXUzA5RK9En1gbb-c5PRS19Pwx0YotduBM7kRfJjnZDSTPRlt_3vszRVO0hOFbWR9Hzvfnuo0lWKvb7jJJ_HPGcQ6PDakfGorm2MseBmFBknJ6bmZleLZ_UouQl1fAY2CrTGc6_4m4ArR5UAsixNv05Xn3fT8OCEzNNMXJX4FRmlXsM5gdN15Ar3YMbamQ6cHfgAXunRggYV3po" />
+                    <div class="relative h-48 sm:h-64 overflow-hidden rounded-custom bg-black/40 border border-white/5 group-hover:border-brand/40 transition-colors">
+                        <img alt="Compactación Detail" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="assets/compactador_cinematic.png" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     </div>
                 </div>
@@ -188,21 +188,21 @@
     <!-- BEGIN: Interactive Section -->
     <section class="bg-surface-100 py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20">
                 <div>
                     <span class="text-brand uppercase tracking-[0.3em] text-sm block mb-4">Experiencia Local</span>
-                    <h2 class="text-5xl font-bold leading-tight">MÁS QUE RENTA,<br /><span class="text-brand">SOCIEDAD ESTRATÉGICA.</span></h2>
+                    <h2 class="text-3xl sm:text-5xl font-bold leading-tight">MÁS QUE RENTA,<br /><span class="text-brand">SOCIEDAD ESTRATÉGICA.</span></h2>
                 </div>
-                <div class="max-w-sm text-right">
+                <div class="max-w-sm text-left md:text-right">
                     <p class="text-gray-400 text-sm mb-6">Ofrecemos soporte técnico 24/7 y operadores certificados para garantizar que su obra nunca se detenga.</p>
-                <button id="toggle-gallery" class="group flex items-center gap-4 ml-auto">
-                    <span class="text-xs font-bold uppercase tracking-widest group-hover:text-brand transition-colors">Conoce nuestra flota</span>
-                    <div class="w-12 h-12 rounded-full border border-brand flex items-center justify-center group-hover:bg-brand group-hover:text-black transition-all">
-                        <svg class="w-5 h-5 transition-transform duration-500" id="gallery-arrow" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </div>
-                </button>
+                    <button id="toggle-gallery" class="group flex items-center gap-4 ml-0 md:ml-auto">
+                        <span class="text-xs font-bold uppercase tracking-widest group-hover:text-brand transition-colors">Conoce nuestra flota</span>
+                        <div class="w-12 h-12 rounded-full border border-brand flex items-center justify-center group-hover:bg-brand group-hover:text-black transition-all">
+                            <svg class="w-5 h-5 transition-transform duration-500" id="gallery-arrow" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </div>
+                    </button>
+                </div>
             </div>
-        </div>
 
         <!-- Machinery Gallery (Revealed on click) -->
         <div id="machinery-gallery" class="max-w-7xl mx-auto px-6">
@@ -291,10 +291,10 @@
 
     <!-- BEGIN: Contact Section -->
     <section id="contacto" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             <div>
                 <span class="text-brand uppercase tracking-[0.3em] text-sm block mb-4">Hablemos hoy</span>
-                <h2 class="text-5xl font-bold mb-8 italic">¿LISTO PARA <br><span class="text-brand">CONSTRUIR?</span></h2>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-8 italic">¿LISTO PARA <br><span class="text-brand">CONSTRUIR?</span></h2>
                 <div class="space-y-8">
                     <div class="flex items-start gap-6">
                         <div class="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
@@ -316,8 +316,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="glass-card p-10 rounded-xl relative overflow-hidden">
+ 
+            <div class="glass-card p-6 sm:p-10 rounded-xl relative overflow-hidden">
                 <form class="space-y-6" novalidate>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -350,8 +350,8 @@
     <footer class="bg-black py-16 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div class="md:col-span-2">
-                <div class="flex items-center gap-2 mb-6">
-                    <div class="w-6 h-6 bg-brand rounded-sm rotate-45 flex items-center justify-center"></div>
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="assets/HotGear_Logo.svg" alt="HotGear Logo" class="h-8 w-auto">
                     <span class="text-xl font-bold tracking-tighter uppercase">HOT<span class="text-brand">GEAR</span></span>
                 </div>
                 <p class="text-gray-500 max-w-sm mb-8">Líderes en arrendamiento de maquinaria pesada para el desarrollo de infraestructura en el Caribe Mexicano.</p>
