@@ -1,83 +1,91 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>HOT GEAR | Renta de Equipo Industrial</title>
-    <meta name="description" content="Renta de maquinaria pesada de alto rendimiento en Cancún y la Riviera Maya. Ofrecemos excavadoras, grúas y cargadores frontales para obras de gran escala." />
-    <meta name="keywords" content="renta de maquinaria pesada, construcción Cancún, excavadoras, grúas, cargadores frontales, HotGear, Riviera Maya, obra civil" />
+    <meta name="description"
+        content="Renta de maquinaria pesada de alto rendimiento en Cancún y la Riviera Maya. Ofrecemos excavadoras, grúas y cargadores frontales para obras de gran escala." />
+    <meta name="keywords"
+        content="renta de maquinaria pesada, construcción Cancún, excavadoras, grúas, cargadores frontales, HotGear, Riviera Maya, obra civil" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="HOT GEAR | Renta de Equipo Industrial" />
-    <meta property="og:description" content="Soluciones de construcción de alto rendimiento en Cancún y la Riviera Maya. Equipos de última generación." />
+    <meta property="og:description"
+        content="Soluciones de construcción de alto rendimiento en Cancún y la Riviera Maya. Equipos de última generación." />
     <meta property="og:image" content="assets/excavadora_cat336_cinematic_1773423083266.png" />
 
-    
+
     <!-- BEGIN: Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
     <!-- END: Google Fonts -->
-    
+
     <!-- BEGIN: Tailwind CSS & Config -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
-          darkMode: 'class',
-          theme: {
-            extend: {
-              colors: {
-                brand: {
-                  DEFAULT: '#FF8C00',
-                  dark: '#e67e00',
-                  light: '#ffa333',
-                },
-                surface: {
-                  50: '#121212',
-                  100: '#1a1a1a',
-                  200: '#2a2a2a',
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF8C00',
+                            dark: '#e67e00',
+                            light: '#ffa333',
+                        },
+                        surface: {
+                            50: '#121212',
+                            100: '#1a1a1a',
+                            200: '#2a2a2a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'custom': '8px',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
                 }
-              },
-              fontFamily: {
-                sans: ['Space Grotesk', 'sans-serif'],
-              },
-              borderRadius: {
-                'custom': '8px',
-              },
-              animation: {
-                'float': 'float 6s ease-in-out infinite',
-                'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              },
-              keyframes: {
-                float: {
-                  '0%, 100%': { transform: 'translateY(0)' },
-                  '50%': { transform: 'translateY(-10px)' },
-                }
-              }
             }
-          }
         }
     </script>
     <!-- END: Tailwind CSS & Config -->
-    
+
     <!-- BEGIN: Custom Styles -->
     <link rel="stylesheet" href="style.css">
     <!-- END: Custom Styles -->
 </head>
+
 <body class="font-sans mesh-gradient min-h-screen">
     <!-- BEGIN: Navigation -->
     <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center w-full">
             <a class="flex items-center gap-3" href="#">
-                <img src="assets/HotGear_Logo.svg" alt="HotGear Logo" class="h-8 md:h-9 w-auto">
-                <span class="text-lg md:text-xl font-bold tracking-tighter uppercase">HOT<span class="text-brand">GEAR</span></span>
+                <img src="assets/HotGear_Logo.svg" alt="HotGear Logo" class="h-10 md:h-12 w-auto">
+                <span class="text-xl md:text-2xl font-bold tracking-tight uppercase">HOT<span
+                        class="text-brand">GEAR</span></span>
             </a>
             <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
                 <a class="hover:text-brand transition-colors" href="#">Catálogo</a>
                 <a class="hover:text-brand transition-colors" href="#">Proyectos</a>
                 <a class="hover:text-brand transition-colors" href="#contacto">Contacto</a>
             </div>
-            <button class="px-3 py-1.5 md:px-5 md:py-2 bg-brand text-black font-bold rounded-custom hover:bg-brand-light transition-all text-[10px] md:text-xs uppercase tracking-widest">
+            <button
+                class="px-3 py-1.5 md:px-5 md:py-2 bg-brand text-black font-bold rounded-custom hover:bg-brand-light transition-all text-[10px] md:text-xs uppercase tracking-widest">
                 Cotizar Ahora
             </button>
         </div>
@@ -89,18 +97,21 @@
         <div class="relative z-10">
             <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold leading-none mb-6">
                 POTENCIA <br />
-                <span class="text-transparent border-b-4 border-brand italic" style="-webkit-text-stroke: 1px rgb(255, 140, 0);">INDUSTRIAL</span><br />
-                COSTA CARIBE
+                <span class="text-transparent border-b-4 border-brand italic"
+                    style="-webkit-text-stroke: 1px rgb(255, 140, 0);">INDUSTRIAL</span><br />
+
             </h1>
             <p class="max-w-xl text-gray-400 text-lg mb-8 border-l-2 border-brand pl-6">
-                Soluciones de construcción de alto rendimiento en Cancún y la Riviera Maya. Equipos de última generación para proyectos de gran escala.
+                Soluciones de construcción de alto rendimiento en Cancún y la Riviera Maya. Equipos de última generación
+                para proyectos de gran escala.
             </p>
         </div>
-        <!-- Decorative machine silhouette -->
-        <div class="absolute top-10 right-0 opacity-5 pointer-events-none select-none">
-            <svg fill="currentColor" height="400" viewbox="0 0 24 24" width="600">
-                <path d="M22,17V15H17V11H13L10.5,6H4V17H2V19H22V17M6,17H8V15H6V17M6,11H8V9H6V11M10,15H12V13H10V15M10,11H12V9H10V11Z"></path>
-            </svg>
+        <!-- Large Decorative Brand Logo -->
+        <div class="absolute top-20 right-6 md:right-12 lg:right-20 hidden md:block w-72 h-72 lg:w-96 lg:h-96 pointer-events-none select-none animate-float">
+            <div class="relative w-full h-full rounded-full bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-md border border-white/10 p-12 shadow-[0_0_80px_rgba(255,140,0,0.15)] flex items-center justify-center">
+                <div class="absolute inset-0 rounded-full border border-brand/20 animate-pulse-slow"></div>
+                <img src="assets/HotGear_Logo.svg" alt="HotGear Brand Emblem" class="w-4/5 h-4/5 object-contain filter drop-shadow-[0_0_30px_rgba(255,140,0,0.3)]">
+            </div>
         </div>
     </header>
     <!-- END: Hero Section -->
@@ -111,17 +122,23 @@
             <!-- Category: Excavadoras (Large Card) -->
             <section class="md:col-span-7 lg:col-span-8 group" data-purpose="category-card">
                 <div class="glass-card p-8 rounded-custom relative overflow-hidden h-[400px] flex flex-col justify-end">
-                    <div class="absolute top-8 right-8 text-6xl font-black text-white/5 group-hover:text-brand/10 transition-colors uppercase">01</div>
-                    <div class="absolute top-0 left-0 w-full h-full opacity-25 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700">
+                    <div
+                        class="absolute top-8 right-8 text-6xl font-black text-white/5 group-hover:text-brand/10 transition-colors uppercase">
+                        01</div>
+                    <div
+                        class="absolute top-0 left-0 w-full h-full opacity-25 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700">
                         <!-- Simplified Excavator Silhouette -->
-                        <img alt="Excavadoras" class="w-full h-full object-cover" src="assets/excavadora_cat336_cinematic_1773423083266.png" />
+                        <img alt="Excavadoras" class="w-full h-full object-cover"
+                            src="assets/excavadora_cat336_cinematic_1773423083266.png" />
                     </div>
                     <div class="relative z-10">
                         <h2 class="text-4xl font-bold mb-2">Excavadoras</h2>
                         <p class="text-brand text-sm tracking-[0.2em] uppercase mb-4">Movimiento de Tierras</p>
                         <div class="flex gap-4">
-                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs">Caterpillar 320</span>
-                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs">Komatsu PC200</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs">Caterpillar
+                                320</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs">Komatsu
+                                PC200</span>
                         </div>
                     </div>
                 </div>
@@ -131,32 +148,40 @@
             <div class="md:col-span-5 lg:col-span-4 grid grid-cols-1 gap-6">
                 <!-- Category: Grúas -->
                 <section class="group" data-purpose="category-card">
-                    <div class="glass-card p-6 rounded-custom h-[188px] flex flex-col justify-between overflow-hidden relative">
+                    <div
+                        class="glass-card p-6 rounded-custom h-[188px] flex flex-col justify-between overflow-hidden relative">
                         <div class="absolute -right-4 top-0 opacity-10 group-hover:opacity-20 transition-opacity">
                             <svg fill="currentColor" height="150" viewbox="0 0 24 24" width="150">
-                                <path d="M11,18H13V15.5L18,20.5L19.5,19L14.5,14H17V12H12.5L16,8.5L14.5,7L11,10.5V2H9V10.5L5.5,7L4,8.5L7.5,12H3V14H5.5L0.5,19L2,20.5L7,15.5V18H9V22H11V18Z"></path>
+                                <path
+                                    d="M11,18H13V15.5L18,20.5L19.5,19L14.5,14H17V12H12.5L16,8.5L14.5,7L11,10.5V2H9V10.5L5.5,7L4,8.5L7.5,12H3V14H5.5L0.5,19L2,20.5L7,15.5V18H9V22H11V18Z">
+                                </path>
                             </svg>
                         </div>
                         <div class="relative z-10">
                             <h3 class="text-2xl font-bold">Grúas</h3>
                             <p class="text-brand/80 text-xs uppercase tracking-wider">Elevación Industrial</p>
                         </div>
-                        <a class="text-xs font-bold border-b border-brand inline-block w-fit pb-1 group-hover:text-brand transition-colors" href="#">VER MODELOS →</a>
+                        <a class="text-xs font-bold border-b border-brand inline-block w-fit pb-1 group-hover:text-brand transition-colors"
+                            href="#">VER MODELOS →</a>
                     </div>
                 </section>
                 <!-- Category: Cargadores -->
                 <section class="group" data-purpose="category-card">
-                    <div class="glass-card p-6 rounded-custom h-[188px] flex flex-col justify-between overflow-hidden relative">
+                    <div
+                        class="glass-card p-6 rounded-custom h-[188px] flex flex-col justify-between overflow-hidden relative">
                         <div class="absolute -right-4 top-0 opacity-10 group-hover:opacity-20 transition-opacity">
                             <svg fill="currentColor" height="150" viewbox="0 0 24 24" width="150">
-                                <path d="M17,11V15H15V11H17M18,17V19H2V17H4V13H10V17H12V13H18M10,9H12V11H10V9M14,9H16V11H14V9M18,9H20V11H18V9M4,9H6V11H4V9M2,9H4V11H2V9Z"></path>
+                                <path
+                                    d="M17,11V15H15V11H17M18,17V19H2V17H4V13H10V17H12V13H18M10,9H12V11H10V9M14,9H16V11H14V9M18,9H20V11H18V9M4,9H6V11H4V9M2,9H4V11H2V9Z">
+                                </path>
                             </svg>
                         </div>
                         <div class="relative z-10">
                             <h3 class="text-2xl font-bold">Cargadores</h3>
                             <p class="text-brand/80 text-xs uppercase tracking-wider">Logística de Carga</p>
                         </div>
-                        <a class="text-xs font-bold border-b border-brand inline-block w-fit pb-1 group-hover:text-brand transition-colors" href="#">VER MODELOS →</a>
+                        <a class="text-xs font-bold border-b border-brand inline-block w-fit pb-1 group-hover:text-brand transition-colors"
+                            href="#">VER MODELOS →</a>
                     </div>
                 </section>
             </div>
@@ -165,18 +190,26 @@
             <section class="md:col-span-12 group mt-8" data-purpose="category-card">
                 <div class="glass-card p-6 sm:p-10 rounded-custom grid md:grid-cols-2 items-center gap-6 md:gap-10">
                     <div>
-                        <h2 class="text-3xl sm:text-5xl font-bold mb-4 tracking-tighter italic">Equipos de Compactación</h2>
+                        <h2 class="text-3xl sm:text-5xl font-bold mb-4 tracking-tighter italic">Equipos de Compactación
+                        </h2>
                         <p class="text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
-                            Vibrocompactadores de rodillo liso y pata de cabra para preparación de terrenos costeros. Tecnología de alta eficiencia en compactación de suelos.
+                            Vibrocompactadores de rodillo liso y pata de cabra para preparación de terrenos costeros.
+                            Tecnología de alta eficiencia en compactación de suelos.
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">DYNAPAC</span>
-                            <span class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">BOMAG</span>
-                            <span class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">CASE</span>
+                            <span
+                                class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">DYNAPAC</span>
+                            <span
+                                class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">BOMAG</span>
+                            <span
+                                class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand rounded-custom text-xs font-bold">CASE</span>
                         </div>
                     </div>
-                    <div class="relative h-48 sm:h-64 overflow-hidden rounded-custom bg-black/40 border border-white/5 group-hover:border-brand/40 transition-colors">
-                        <img alt="Compactación Detail" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="assets/compactador_cinematic.png" />
+                    <div
+                        class="relative h-48 sm:h-64 overflow-hidden rounded-custom bg-black/40 border border-white/5 group-hover:border-brand/40 transition-colors">
+                        <img alt="Compactación Detail"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                            src="assets/compactador_cinematic.png" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     </div>
                 </div>
@@ -191,76 +224,100 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20">
                 <div>
                     <span class="text-brand uppercase tracking-[0.3em] text-sm block mb-4">Experiencia Local</span>
-                    <h2 class="text-3xl sm:text-5xl font-bold leading-tight">MÁS QUE RENTA,<br /><span class="text-brand">SOCIEDAD ESTRATÉGICA.</span></h2>
+                    <h2 class="text-3xl sm:text-5xl font-bold leading-tight">MÁS QUE RENTA,<br /><span
+                            class="text-brand">SOCIEDAD ESTRATÉGICA.</span></h2>
                 </div>
                 <div class="max-w-sm text-left md:text-right">
-                    <p class="text-gray-400 text-sm mb-6">Ofrecemos soporte técnico 24/7 y operadores certificados para garantizar que su obra nunca se detenga.</p>
+                    <p class="text-gray-400 text-sm mb-6">Ofrecemos soporte técnico 24/7 y operadores certificados para
+                        garantizar que su obra nunca se detenga.</p>
                     <button id="toggle-gallery" class="group flex items-center gap-4 ml-0 md:ml-auto">
-                        <span class="text-xs font-bold uppercase tracking-widest group-hover:text-brand transition-colors">Conoce nuestra flota</span>
-                        <div class="w-12 h-12 rounded-full border border-brand flex items-center justify-center group-hover:bg-brand group-hover:text-black transition-all">
-                            <svg class="w-5 h-5 transition-transform duration-500" id="gallery-arrow" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest group-hover:text-brand transition-colors">Conoce
+                            nuestra flota</span>
+                        <div
+                            class="w-12 h-12 rounded-full border border-brand flex items-center justify-center group-hover:bg-brand group-hover:text-black transition-all">
+                            <svg class="w-5 h-5 transition-transform duration-500" id="gallery-arrow" fill="none"
+                                stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+                                <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
                         </div>
                     </button>
                 </div>
             </div>
 
-        <!-- Machinery Gallery (Revealed on click) -->
-        <div id="machinery-gallery" class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1: Excavadora -->
-                <article class="gallery-card group/item">
-                    <div class="gallery-image-container">
-                        <img src="assets/excavadora_cat336_cinematic_1773423083266.png" alt="Excavadora CAT 336">
-                        <div class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">Premium</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Caterpillar 336</h3>
-                        <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Excavadora Hidráulica</p>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Excavadora de 36 toneladas diseñada para alta productividad en excavaciones profundas y carga de camiones.</p>
-                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
-                            <span class="text-[10px] text-gray-500 uppercase">Uso: Cimientos Pesados</span>
-                            <span class="text-brand text-xs font-bold">Rentar →</span>
+            <!-- Machinery Gallery (Revealed on click) -->
+            <div id="machinery-gallery" class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Excavadora -->
+                    <article class="gallery-card group/item">
+                        <div class="gallery-image-container">
+                            <img src="assets/excavadora_cat336_cinematic_1773423083266.png" alt="Excavadora CAT 336">
+                            <div
+                                class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">
+                                Premium</div>
                         </div>
-                    </div>
-                </article>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Caterpillar
+                                336</h3>
+                            <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Excavadora Hidráulica
+                            </p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">Excavadora de 36 toneladas diseñada
+                                para alta productividad en excavaciones profundas y carga de camiones.</p>
+                            <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                                <span class="text-[10px] text-gray-500 uppercase">Uso: Cimientos Pesados</span>
+                                <span class="text-brand text-xs font-bold">Rentar →</span>
+                            </div>
+                        </div>
+                    </article>
 
-                <!-- Card 2: Cargador -->
-                <article class="gallery-card group/item">
-                    <div class="gallery-image-container">
-                        <img src="assets/cargador_volvo_l150h_cinematic_1773423099443.png" alt="Cargador Volvo L150H">
-                        <div class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">Eficiencia</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Volvo L150H</h3>
-                        <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Cargador Frontal</p>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Líder en eficiencia de combustible para manejo de materiales, canteras e infraestructura a gran escala.</p>
-                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
-                            <span class="text-[10px] text-gray-500 uppercase">Uso: Logística Agregada</span>
-                            <span class="text-brand text-xs font-bold">Rentar →</span>
+                    <!-- Card 2: Cargador -->
+                    <article class="gallery-card group/item">
+                        <div class="gallery-image-container">
+                            <img src="assets/cargador_volvo_l150h_cinematic_1773423099443.png"
+                                alt="Cargador Volvo L150H">
+                            <div
+                                class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">
+                                Eficiencia</div>
                         </div>
-                    </div>
-                </article>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Volvo L150H
+                            </h3>
+                            <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Cargador Frontal</p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">Líder en eficiencia de combustible
+                                para manejo de materiales, canteras e infraestructura a gran escala.</p>
+                            <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                                <span class="text-[10px] text-gray-500 uppercase">Uso: Logística Agregada</span>
+                                <span class="text-brand text-xs font-bold">Rentar →</span>
+                            </div>
+                        </div>
+                    </article>
 
-                <!-- Card 3: Grúa -->
-                <article class="gallery-card group/item">
-                    <div class="gallery-image-container">
-                        <img src="assets/grua_liebherr_ltm1110_cinematic_1773423116048.png" alt="Grúa Liebherr LTM 1110">
-                        <div class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">Potencia</div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Liebherr LTM 1110</h3>
-                        <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Grúa Todo Terreno</p>
-                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Capacidad de carga excepcional con pluma telescópica de largo alcance para montajes industriales complejos.</p>
-                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
-                            <span class="text-[10px] text-gray-500 uppercase">Uso: Montaje Industrial</span>
-                            <span class="text-brand text-xs font-bold">Rentar →</span>
+                    <!-- Card 3: Grúa -->
+                    <article class="gallery-card group/item">
+                        <div class="gallery-image-container">
+                            <img src="assets/grua_liebherr_ltm1110_cinematic_1773423116048.png"
+                                alt="Grúa Liebherr LTM 1110">
+                            <div
+                                class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">
+                                Potencia</div>
                         </div>
-                    </div>
-                </article>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Liebherr
+                                LTM 1110</h3>
+                            <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Grúa Todo Terreno</p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">Capacidad de carga excepcional con
+                                pluma telescópica de largo alcance para montajes industriales complejos.</p>
+                            <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                                <span class="text-[10px] text-gray-500 uppercase">Uso: Montaje Industrial</span>
+                                <span class="text-brand text-xs font-bold">Rentar →</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
 
-        <!-- Stats Grid -->
+            <!-- Stats Grid -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
                 <div data-purpose="stat">
                     <div class="text-brand text-4xl font-bold mb-2">50+</div>
@@ -294,11 +351,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             <div>
                 <span class="text-brand uppercase tracking-[0.3em] text-sm block mb-4">Hablemos hoy</span>
-                <h2 class="text-4xl sm:text-5xl font-bold mb-8 italic">¿LISTO PARA <br><span class="text-brand">CONSTRUIR?</span></h2>
+                <h2 class="text-4xl sm:text-5xl font-bold mb-8 italic">¿LISTO PARA <br><span
+                        class="text-brand">CONSTRUIR?</span></h2>
                 <div class="space-y-8">
                     <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-1 uppercase tracking-wider">Sede Corporativa</h4>
@@ -306,8 +369,12 @@
                         </div>
                     </div>
                     <div class="flex items-start gap-6">
-                        <div class="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-1 uppercase tracking-wider">Canal Directo</h4>
@@ -316,28 +383,40 @@
                     </div>
                 </div>
             </div>
- 
+
             <div class="glass-card p-6 sm:p-10 rounded-xl relative overflow-hidden">
                 <form class="space-y-6" novalidate>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label for="contact-name" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Nombre Full</label>
-                            <input type="text" id="contact-name" name="nombre" class="contact-input" placeholder="Ej. Juan Pérez" required>
+                            <label for="contact-name"
+                                class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Nombre
+                                Full</label>
+                            <input type="text" id="contact-name" name="nombre" class="contact-input"
+                                placeholder="Ej. Juan Pérez" required>
                         </div>
                         <div>
-                            <label for="contact-company" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Empresa</label>
-                            <input type="text" id="contact-company" name="empresa" class="contact-input" placeholder="Opcional">
+                            <label for="contact-company"
+                                class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Empresa</label>
+                            <input type="text" id="contact-company" name="empresa" class="contact-input"
+                                placeholder="Opcional">
                         </div>
                     </div>
                     <div>
-                        <label for="contact-email" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Correo Electrónico</label>
-                        <input type="email" id="contact-email" name="correo" class="contact-input" placeholder="ejemplo@email.com" required>
+                        <label for="contact-email"
+                            class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Correo
+                            Electrónico</label>
+                        <input type="email" id="contact-email" name="correo" class="contact-input"
+                            placeholder="ejemplo@email.com" required>
                     </div>
                     <div>
-                        <label for="contact-message" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Proyecto / Maquinaria</label>
-                        <textarea id="contact-message" name="mensaje" class="contact-input h-32 resize-none" placeholder="Cuéntanos qué necesitas mover..." required></textarea>
+                        <label for="contact-message"
+                            class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Proyecto /
+                            Maquinaria</label>
+                        <textarea id="contact-message" name="mensaje" class="contact-input h-32 resize-none"
+                            placeholder="Cuéntanos qué necesitas mover..." required></textarea>
                     </div>
-                    <button type="submit" class="w-full py-4 bg-brand text-black font-bold uppercase tracking-widest hover:bg-white transition-all duration-300">
+                    <button type="submit"
+                        class="w-full py-4 bg-brand text-black font-bold uppercase tracking-widest hover:bg-white transition-all duration-300">
                         Enviar Solicitud
                     </button>
                 </form>
@@ -352,18 +431,32 @@
             <div class="md:col-span-2">
                 <div class="flex items-center gap-3 mb-6">
                     <img src="assets/HotGear_Logo.svg" alt="HotGear Logo" class="h-8 w-auto">
-                    <span class="text-xl font-bold tracking-tighter uppercase">HOT<span class="text-brand">GEAR</span></span>
+                    <span class="text-xl font-bold tracking-tighter uppercase">HOT<span
+                            class="text-brand">GEAR</span></span>
                 </div>
-                <p class="text-gray-500 max-w-sm mb-8">Líderes en arrendamiento de maquinaria pesada para el desarrollo de infraestructura en el Caribe Mexicano.</p>
+                <p class="text-gray-500 max-w-sm mb-8">Líderes en arrendamiento de maquinaria pesada para el desarrollo
+                    de infraestructura en el Caribe Mexicano.</p>
                 <div class="flex gap-4">
-                    <a class="w-10 h-10 rounded-custom bg-white/5 border border-white/10 flex items-center justify-center hover:border-brand hover:text-brand transition-colors" href="#" aria-label="Facebook">
-                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    <a class="w-10 h-10 rounded-custom bg-white/5 border border-white/10 flex items-center justify-center hover:border-brand hover:text-brand transition-colors"
+                        href="#" aria-label="Facebook">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
                     </a>
-                    <a class="w-10 h-10 rounded-custom bg-white/5 border border-white/10 flex items-center justify-center hover:border-brand hover:text-brand transition-colors" href="#" aria-label="Instagram">
-                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2c2.717 0 3.056.01 4.122.058 1.066.048 1.79.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.637.417 1.361.465 2.427.048 1.066.058 1.405.058 4.122s-.01 3.056-.058 4.122c-.048 1.066-.217 1.79-.465 2.427a4.88 4.88 0 01-1.153 1.772 4.88 4.88 0 01-1.772 1.153c-.637.247-1.361.417-2.427.465-1.066.048-1.405.058-4.122.058s-3.056-.01-4.122-.058c-1.066-.048-1.79-.217-2.427-.465a4.88 4.88 0 01-1.772-1.153 4.88 4.88 0 01-1.153-1.772c-.247-.637-.417-1.361-.465-2.427C2.01 15.056 2 14.717 2 12s.01-3.056.058-4.122c.048-1.066.217-1.79.465-2.427a4.88 4.88 0 011.153-1.772A4.88 4.88 0 015.45 2.523c.637-.247 1.361-.417 2.427-.465C8.944 2.01 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"/></svg>
+                    <a class="w-10 h-10 rounded-custom bg-white/5 border border-white/10 flex items-center justify-center hover:border-brand hover:text-brand transition-colors"
+                        href="#" aria-label="Instagram">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2c2.717 0 3.056.01 4.122.058 1.066.048 1.79.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.637.417 1.361.465 2.427.048 1.066.058 1.405.058 4.122s-.01 3.056-.058 4.122c-.048 1.066-.217 1.79-.465 2.427a4.88 4.88 0 01-1.153 1.772 4.88 4.88 0 01-1.772 1.153c-.637.247-1.361.417-2.427.465-1.066.048-1.405.058-4.122.058s-3.056-.01-4.122-.058c-1.066-.048-1.79-.217-2.427-.465a4.88 4.88 0 01-1.772-1.153 4.88 4.88 0 01-1.153-1.772c-.247-.637-.417-1.361-.465-2.427C2.01 15.056 2 14.717 2 12s.01-3.056.058-4.122c.048-1.066.217-1.79.465-2.427a4.88 4.88 0 011.153-1.772A4.88 4.88 0 015.45 2.523c.637-.247 1.361-.417 2.427-.465C8.944 2.01 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z" />
+                        </svg>
                     </a>
-                    <a class="w-10 h-10 rounded-custom bg-white/5 border border-white/10 flex items-center justify-center hover:border-brand hover:text-brand transition-colors" href="#" aria-label="LinkedIn">
-                        <svg class="social-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-.5 15.5v-5.3a2.7 2.7 0 00-5.4 0v5.3H10.4v-8.8h2.7v1.2a5.4 5.4 0 015.4-1.2v8.8h-2.7zm-11.2-10a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm1.4 10v-8.8H6.7v8.8h2.7z"/></svg>
+                    <a class="w-10 h-10 rounded-custom bg-white/5 border border-white/10 flex items-center justify-center hover:border-brand hover:text-brand transition-colors"
+                        href="#" aria-label="LinkedIn">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-.5 15.5v-5.3a2.7 2.7 0 00-5.4 0v5.3H10.4v-8.8h2.7v1.2a5.4 5.4 0 015.4-1.2v8.8h-2.7zm-11.2-10a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm1.4 10v-8.8H6.7v8.8h2.7z" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -388,7 +481,8 @@
                 <p class="text-gray-400 text-xs mt-2">hola@mhotgear.com</p>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] text-gray-600 uppercase tracking-widest">
+        <div
+            class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] text-gray-600 uppercase tracking-widest">
             <p>© 2026 HotGear. Todos los derechos reservados.</p>
             <div class="flex gap-8 mt-4 md:mt-0">
                 <a class="hover:text-white transition-colors" href="#">Privacidad</a>
@@ -401,4 +495,5 @@
     <script src="js/main.js"></script>
     <!-- END: Scripts -->
 </body>
+
 </html>
