@@ -174,4 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         }, 4000);
     }
+
+    // === 4. CONTROL DEL MENÚ HAMBURGUESA (MÓVIL) ===
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en cualquier enlace
+        const mobileLinks = mobileMenu.querySelectorAll('a, button');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 });
