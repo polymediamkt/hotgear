@@ -1,0 +1,177 @@
+:root {
+  /* Paleta de Colores Corporativa */
+  --brand: #FF8C00;
+  --brand-light: #ffa333;
+  --brand-dark: #e67e00;
+  --bg-dark: #050505;
+  --bg-surface: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  
+  /* Sistema de Bordes y Sombras (Glassmorphic) */
+  --border-glass: rgba(255, 255, 255, 0.04);
+  --border-glass-hover: rgba(255, 140, 0, 0.25);
+  --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(255, 140, 0, 0.1);
+  
+  /* Animaciones y Tiempos */
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Selección de Texto Personalizada (Zero Ambiguity) */
+::selection {
+  background-color: var(--brand);
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: var(--brand);
+  color: #000000;
+}
+
+/* Tarjetas Glassmorphic */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: var(--brand);
+  transform: scale(1.015) translateY(-5px);
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.05), rgba(255, 255, 255, 0.01));
+  box-shadow: var(--shadow-premium), var(--shadow-glow);
+}
+
+.category-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 3s forwards ease-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.mesh-gradient {
+  background-image:
+    radial-gradient(at 0% 0%, hsla(33, 100%, 50%, 0.1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(33, 100%, 50%, 0.06) 0, transparent 50%);
+}
+
+/* Galería Interactiva y Micro-animaciones */
+#machinery-gallery {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.6s ease-in-out, 
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(30px);
+}
+
+#machinery-gallery.visible {
+  max-height: 2000px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 3rem;
+}
+
+.gallery-card {
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.gallery-card:hover {
+  border-color: var(--brand);
+  transform: translateY(-8px);
+  background: rgba(25, 25, 25, 0.85);
+  box-shadow: var(--shadow-premium), 0 0 25px rgba(255, 140, 0, 0.15);
+}
+
+.gallery-image-container {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.gallery-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-card:hover .gallery-image-container img {
+  transform: scale(1.08);
+}
+
+/* Formulario de Contacto Premium */
+.contact-input {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  width: 100%;
+  transition: var(--transition-fast);
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: rgba(255, 140, 0, 0.03);
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.08);
+}
+
+/* Evitar foco de accesibilidad feo por defecto del navegador */
+.contact-input:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+/* Rotación y escalamiento de iconos de redes sociales */
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-light);
+}
