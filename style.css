@@ -86,6 +86,7 @@ body {
   opacity: 1;
   transform: translateY(0);
   margin-top: 3rem;
+  padding-bottom: 4rem;
 }
 
 .gallery-card {
