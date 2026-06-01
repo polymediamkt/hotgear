@@ -1,8 +1,8 @@
 :root {
   /* Paleta de Colores Corporativa */
-  --brand: #FF8C00;
-  --brand-light: #ffa333;
-  --brand-dark: #e67e00;
+  --brand: #ec5e28;
+  --brand-light: #f37f53;
+  --brand-dark: #ce4212;
   --bg-dark: #050505;
   --bg-surface: #121212;
   --text-primary: #ffffff;
@@ -10,9 +10,9 @@
   
   /* Sistema de Bordes y Sombras (Glassmorphic) */
   --border-glass: rgba(255, 255, 255, 0.04);
-  --border-glass-hover: rgba(255, 140, 0, 0.25);
+  --border-glass-hover: rgba(236, 94, 40, 0.25);
   --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(255, 140, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(236, 94, 40, 0.1);
   
   /* Animaciones y Tiempos */
   --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,7 +48,7 @@ body {
 .glass-card:hover {
   border-color: var(--brand);
   transform: scale(1.015) translateY(-5px);
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.05), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(135deg, rgba(236, 94, 40, 0.05), rgba(255, 255, 255, 0.01));
   box-shadow: var(--shadow-premium), var(--shadow-glow);
 }
 
@@ -66,8 +66,8 @@ body {
 
 .mesh-gradient {
   background-image:
-    radial-gradient(at 0% 0%, hsla(33, 100%, 50%, 0.1) 0, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(33, 100%, 50%, 0.06) 0, transparent 50%);
+    radial-gradient(at 0% 0%, hsla(17, 84%, 54%, 0.1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(17, 84%, 54%, 0.06) 0, transparent 50%);
 }
 
 /* Galería Interactiva y Micro-animaciones */
@@ -101,7 +101,7 @@ body {
   border-color: var(--brand);
   transform: translateY(-8px);
   background: rgba(25, 25, 25, 0.85);
-  box-shadow: var(--shadow-premium), 0 0 25px rgba(255, 140, 0, 0.15);
+  box-shadow: var(--shadow-premium), 0 0 25px rgba(236, 94, 40, 0.15);
 }
 
 .gallery-image-container {
@@ -136,8 +136,8 @@ body {
 .contact-input:focus {
   outline: none;
   border-color: var(--brand);
-  background: rgba(255, 140, 0, 0.03);
-  box-shadow: 0 0 15px rgba(255, 140, 0, 0.08);
+  background: rgba(236, 94, 40, 0.03);
+  box-shadow: 0 0 15px rgba(236, 94, 40, 0.08);
 }
 
 /* Evitar foco de accesibilidad feo por defecto del navegador */

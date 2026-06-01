@@ -138,15 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.style.border = '1px solid rgba(255, 255, 255, 0.08)';
 
         if (type === 'success') {
-            toast.style.background = 'rgba(255, 140, 0, 0.15)'; // Naranja translúcido
-            toast.style.borderColor = 'rgba(255, 140, 0, 0.3)';
+            toast.style.background = 'rgba(236, 94, 40, 0.15)'; // Naranja translúcido
+            toast.style.borderColor = 'rgba(236, 94, 40, 0.3)';
         } else {
             toast.style.background = 'rgba(239, 68, 68, 0.15)'; // Rojo translúcido
             toast.style.borderColor = 'rgba(239, 68, 68, 0.3)';
         }
 
         // Icono y Texto
-        const iconColor = type === 'success' ? '#FF8C00' : '#ef4444';
+        const iconColor = type === 'success' ? '#ec5e28' : '#ef4444';
         toast.innerHTML = `
             <svg class="w-6 h-6 shrink-0" fill="none" stroke="${iconColor}" stroke-width="2" viewBox="0 0 24 24" style="filter: drop-shadow(0 0 4px ${iconColor}40)">
                 ${type === 'success' 
@@ -193,6 +193,179 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileMenu.classList.add('hidden');
                 menuToggle.setAttribute('aria-expanded', 'false');
             });
+        });
+    }
+
+    // === 5. CONTROL DE PESTAÑAS COMPRA/VENTA Y VALIDACIÓN ===
+    const tabBuy = document.getElementById('tab-buy');
+    const tabSell = document.getElementById('tab-sell');
+    const buyCatalog = document.getElementById('buy-catalog');
+    const sellFormContainer = document.getElementById('sell-form-container');
+
+    if (tabBuy && tabSell && buyCatalog && sellFormContainer) {
+        tabBuy.addEventListener('click', () => {
+            // Activar botón Comprar
+            tabBuy.classList.add('bg-brand', 'text-black');
+            tabBuy.classList.remove('text-gray-400', 'hover:text-white');
+
+            // Desactivar botón Vender
+            tabSell.classList.remove('bg-brand', 'text-black');
+            tabSell.classList.add('text-gray-400', 'hover:text-white');
+
+            // Mostrar Catálogo, Ocultar Formulario
+            sellFormContainer.classList.add('hidden');
+            sellFormContainer.classList.remove('opacity-100', 'scale-100');
+            sellFormContainer.classList.add('opacity-0', 'scale-95');
+
+            buyCatalog.classList.remove('hidden');
+            setTimeout(() => {
+                buyCatalog.classList.add('opacity-100', 'scale-100');
+                buyCatalog.classList.remove('opacity-0', 'scale-95');
+            }, 50);
+        });
+
+        tabSell.addEventListener('click', () => {
+            // Activar botón Vender
+            tabSell.classList.add('bg-brand', 'text-black');
+            tabSell.classList.remove('text-gray-400', 'hover:text-white');
+
+            // Desactivar botón Comprar
+            tabBuy.classList.remove('bg-brand', 'text-black');
+            tabBuy.classList.add('text-gray-400', 'hover:text-white');
+
+            // Mostrar Formulario, Ocultar Catálogo
+            buyCatalog.classList.add('hidden');
+            buyCatalog.classList.remove('opacity-100', 'scale-100');
+            buyCatalog.classList.add('opacity-0', 'scale-95');
+
+            sellFormContainer.classList.remove('hidden');
+            setTimeout(() => {
+                sellFormContainer.classList.add('opacity-100', 'scale-100');
+                sellFormContainer.classList.remove('opacity-0', 'scale-95');
+            }, 50);
+        });
+    }
+
+    // Validación del Formulario de Venta (Zero Trust)
+    const sellForm = document.getElementById('sell-machinery-form');
+    if (sellForm) {
+        sellForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const typeInput = document.getElementById('sell-type');
+            const brandInput = document.getElementById('sell-brand');
+            const modelInput = document.getElementById('sell-model');
+            const yearInput = document.getElementById('sell-year');
+            const hoursInput = document.getElementById('sell-hours');
+            const conditionInput = document.getElementById('sell-condition');
+            const priceInput = document.getElementById('sell-price');
+            const nameInput = document.getElementById('sell-contact-name');
+            const emailInput = document.getElementById('sell-contact-email');
+
+            let isValid = true;
+
+            // Resetear errores anteriores
+            const allInputs = [typeInput, brandInput, modelInput, yearInput, hoursInput, conditionInput, priceInput, nameInput, emailInput];
+            allInputs.forEach(input => {
+                if (input) {
+                    input.style.borderColor = '';
+                }
+            });
+
+            // Saneamiento de strings (XSS Shield)
+            const sanitize = (str) => {
+                return str
+                    .trim()
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#x27;')
+                    .replace(/\//g, '&#x2F;');
+            };
+
+            // Validar Tipo
+            if (!typeInput || !typeInput.value) {
+                isValid = false;
+                markAsError(typeInput);
+            }
+
+            // Validar Marca
+            const brandValue = brandInput ? sanitize(brandInput.value) : '';
+            if (brandValue.length < 2) {
+                isValid = false;
+                markAsError(brandInput);
+            }
+
+            // Validar Modelo
+            const modelValue = modelInput ? sanitize(modelInput.value) : '';
+            if (modelValue.length < 1) {
+                isValid = false;
+                markAsError(modelInput);
+            }
+
+            // Validar Año
+            const currentYear = new Date().getFullYear();
+            const yearValue = yearInput ? parseInt(yearInput.value, 10) : 0;
+            if (isNaN(yearValue) || yearValue < 1980 || yearValue > currentYear + 1) {
+                isValid = false;
+                markAsError(yearInput);
+            }
+
+            // Validar Horas
+            const hoursValue = hoursInput ? parseInt(hoursInput.value, 10) : -1;
+            if (isNaN(hoursValue) || hoursValue < 0) {
+                isValid = false;
+                markAsError(hoursInput);
+            }
+
+            // Validar Condición
+            if (!conditionInput || !conditionInput.value) {
+                isValid = false;
+                markAsError(conditionInput);
+            }
+
+            // Validar Precio
+            const priceValue = priceInput ? parseFloat(priceInput.value) : -1;
+            if (isNaN(priceValue) || priceValue <= 0) {
+                isValid = false;
+                markAsError(priceInput);
+            }
+
+            // Validar Nombre de Contacto
+            const nameValue = nameInput ? sanitize(nameInput.value) : '';
+            if (nameValue.length < 2) {
+                isValid = false;
+                markAsError(nameInput);
+            }
+
+            // Validar Email de Contacto (regex RFC 5322)
+            const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+            const emailValue = emailInput ? sanitize(emailInput.value) : '';
+            if (!emailRegex.test(emailValue)) {
+                isValid = false;
+                markAsError(emailInput);
+            }
+
+            if (isValid) {
+                console.log('[SECURITY LOG] Formulario de venta validado y saneado con éxito.');
+                console.log('[DATA TRANSIT]', {
+                    type: typeInput.value,
+                    brand: brandValue,
+                    model: modelValue,
+                    year: yearValue,
+                    hours: hoursValue,
+                    condition: conditionInput.value,
+                    price: priceValue,
+                    contactName: nameValue,
+                    contactEmail: emailValue
+                });
+
+                showToast('¡Propuesta enviada con éxito! Evaluaremos tu equipo a la brevedad.', 'success');
+                sellForm.reset();
+            } else {
+                showToast('Por favor, completa los campos requeridos en rojo.', 'error');
+            }
         });
     }
 });

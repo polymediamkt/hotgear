@@ -34,9 +34,9 @@
                 extend: {
                     colors: {
                         brand: {
-                            DEFAULT: '#FF8C00',
-                            dark: '#e67e00',
-                            light: '#ffa333',
+                            DEFAULT: '#ec5e28',
+                            dark: '#ce4212',
+                            light: '#f37f53',
                         },
                         surface: {
                             50: '#121212',
@@ -76,11 +76,11 @@
     <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/80 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center w-full relative">
             <a class="flex items-center gap-3" href="#">
-                <span class="text-xl md:text-2xl font-bold tracking-tight uppercase">HOT<span
-                        class="text-brand">GEAR</span></span>
+                <img src="assets/HotGear_Logo_Texto.png" alt="HotGear Logo" class="h-[22px] md:h-[29px] w-auto object-contain brightness-0 invert">
             </a>
             <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
                 <a class="hover:text-brand transition-colors" href="#">Catálogo</a>
+                <a class="hover:text-brand transition-colors" href="#compra-venta">Compra/Venta</a>
                 <a class="hover:text-brand transition-colors" href="#">Proyectos</a>
                 <a class="hover:text-brand transition-colors" href="#contacto">Contacto</a>
             </div>
@@ -99,9 +99,9 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg border-b border-white/10 py-6 px-6 flex flex-col gap-4">
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#">Catálogo</a>
+                <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#compra-venta">Compra/Venta</a>
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#">Proyectos</a>
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#contacto">Contacto</a>
                 <button class="w-full mt-2 py-3 bg-brand text-black font-bold rounded-custom hover:bg-brand-light transition-all text-xs uppercase tracking-widest">
@@ -118,7 +118,7 @@
             <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold leading-none mb-6">
                 POTENCIA <br />
                 <span class="text-transparent border-b-4 border-brand italic"
-                    style="-webkit-text-stroke: 1px rgb(255, 140, 0);">INDUSTRIAL</span><br />
+                    style="-webkit-text-stroke: 1px rgb(236, 94, 40);">INDUSTRIAL</span><br />
 
             </h1>
             <p class="max-w-xl text-gray-400 text-lg mb-8 border-l-2 border-brand pl-6">
@@ -369,6 +369,157 @@
     </section>
     <!-- END: Interactive Section -->
 
+    <!-- BEGIN: Buy/Sell Section -->
+    <section id="compra-venta" class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-16">
+            <div>
+                <span class="text-brand uppercase tracking-[0.3em] text-sm block mb-4">Negocios Inteligentes</span>
+                <h2 class="text-3xl sm:text-5xl font-bold leading-tight uppercase">COMPRA Y VENTA<br /><span class="text-brand">DE MAQUINARIA.</span></h2>
+            </div>
+            <div class="flex gap-4 border border-white/10 p-1.5 rounded-custom bg-black/40 backdrop-blur-sm">
+                <button id="tab-buy" class="px-6 py-2.5 rounded-custom text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-brand text-black">
+                    Adquirir Equipos
+                </button>
+                <button id="tab-sell" class="px-6 py-2.5 rounded-custom text-xs font-bold uppercase tracking-wider transition-all duration-300 text-gray-400 hover:text-white">
+                    Vender mi Flota
+                </button>
+            </div>
+        </div>
+
+        <!-- Catalog (Comprar) Container -->
+        <div id="buy-catalog" class="transition-all duration-500 opacity-100 scale-100">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Equipment 1 -->
+                <article class="gallery-card group/item">
+                    <div class="gallery-image-container relative">
+                        <img src="assets/excavadora_cat336_cinematic_1773423083266.png" alt="Excavadora CAT 336D">
+                        <div class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">Venta</div>
+                        <div class="absolute top-4 right-4 py-1 px-3 bg-black/80 text-white text-[10px] font-bold tracking-wider rounded-sm border border-white/10">Año: 2021</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Caterpillar 336D</h3>
+                        <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Horas: 4,800 hrs</p>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Excavadora en óptimas condiciones, motor certificado Cat C9 ACERT, sistema hidráulico de flujo compensado.</p>
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-lg font-bold text-white">$145,000 USD</span>
+                            <button class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand text-xs font-bold rounded-custom hover:bg-brand hover:text-black transition-all">Solicitar Ficha</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Equipment 2 -->
+                <article class="gallery-card group/item">
+                    <div class="gallery-image-container relative">
+                        <img src="assets/cargador_volvo_l150h_cinematic_1773423099443.png" alt="Cargador Volvo L150H">
+                        <div class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">Venta</div>
+                        <div class="absolute top-4 right-4 py-1 px-3 bg-black/80 text-white text-[10px] font-bold tracking-wider rounded-sm border border-white/10">Año: 2020</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Volvo L150H</h3>
+                        <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Horas: 6,200 hrs</p>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Cargador frontal con transmisión OptiShift, cucharón reforzado de 4.2 m³, cabina ROPS/FOPS climatizada.</p>
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-lg font-bold text-white">$165,000 USD</span>
+                            <button class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand text-xs font-bold rounded-custom hover:bg-brand hover:text-black transition-all">Solicitar Ficha</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Equipment 3 -->
+                <article class="gallery-card group/item">
+                    <div class="gallery-image-container relative">
+                        <img src="assets/grua_liebherr_ltm1110_cinematic_1773423116048.png" alt="Grúa Liebherr LTM 1110">
+                        <div class="absolute top-4 left-4 py-1 px-3 bg-brand text-black text-[10px] font-bold uppercase tracking-widest rounded-sm">Venta</div>
+                        <div class="absolute top-4 right-4 py-1 px-3 bg-black/80 text-white text-[10px] font-bold tracking-wider rounded-sm border border-white/10">Año: 2019</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1 group-hover/item:text-brand transition-colors">Liebherr LTM 1110</h3>
+                        <p class="text-brand/60 text-[10px] uppercase tracking-widest mb-4">Horas: 5,500 hrs</p>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Grúa móvil telescópica de 110 toneladas de capacidad, pluma de 60m más plumín articulado de 19m.</p>
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <span class="text-lg font-bold text-white">$320,000 USD</span>
+                            <button class="px-4 py-2 bg-brand/10 border border-brand/20 text-brand text-xs font-bold rounded-custom hover:bg-brand hover:text-black transition-all">Solicitar Ficha</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Sell Form Container (Hidden initially) -->
+        <div id="sell-form-container" class="hidden transition-all duration-500 opacity-0 scale-95 max-w-3xl mx-auto glass-card p-8 sm:p-10 rounded-xl relative overflow-hidden">
+            <h3 class="text-2xl font-bold mb-2">Consignar o Vender Equipo</h3>
+            <p class="text-gray-400 text-sm mb-8">Completa el formulario técnico y nuestro equipo comercial te enviará una valuación formal en menos de 24 horas.</p>
+            
+            <form id="sell-machinery-form" class="space-y-6" novalidate>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="sell-type" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Tipo de Equipo</label>
+                        <select id="sell-type" name="tipo" class="contact-input bg-black/40 border-white/10 text-white rounded-custom" required>
+                            <option value="" disabled selected class="bg-surface-200">Selecciona tipo</option>
+                            <option value="Excavadora" class="bg-surface-200">Excavadora</option>
+                            <option value="Cargador" class="bg-surface-200">Cargador Frontal</option>
+                            <option value="Grua" class="bg-surface-200">Grúa Industrial</option>
+                            <option value="Compactador" class="bg-surface-200">Vibrocompactador</option>
+                            <option value="Otro" class="bg-surface-200">Otro Equipo Pesado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sell-brand" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Marca</label>
+                        <input type="text" id="sell-brand" name="marca" class="contact-input" placeholder="Ej. Caterpillar, Volvo" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label for="sell-model" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Modelo</label>
+                        <input type="text" id="sell-model" name="modelo" class="contact-input" placeholder="Ej. 320DL" required>
+                    </div>
+                    <div>
+                        <label for="sell-year" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Año</label>
+                        <input type="number" id="sell-year" name="anio" class="contact-input" placeholder="Ej. 2018" min="1990" max="2027" required>
+                    </div>
+                    <div>
+                        <label for="sell-hours" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Horas de Operación</label>
+                        <input type="number" id="sell-hours" name="horas" class="contact-input" placeholder="Ej. 5000" min="0" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="sell-condition" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Estado General</label>
+                        <select id="sell-condition" name="condicion" class="contact-input bg-black/40 border-white/10 text-white rounded-custom" required>
+                            <option value="" disabled selected class="bg-surface-200">Selecciona condición</option>
+                            <option value="Excelente" class="bg-surface-200">Excelente (Como Nuevo)</option>
+                            <option value="Bueno" class="bg-surface-200">Bueno (Listo para Operar)</option>
+                            <option value="Regular" class="bg-surface-200">Regular (Requiere mantenimiento menor)</option>
+                            <option value="Reparar" class="bg-surface-200">Requiere reparación mayor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sell-price" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Precio Estimado de Venta (USD)</label>
+                        <input type="number" id="sell-price" name="precio" class="contact-input" placeholder="Ej. 120000" min="0" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="sell-contact-name" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Nombre de Contacto</label>
+                        <input type="text" id="sell-contact-name" name="nombre" class="contact-input" placeholder="Tu Nombre completo" required>
+                    </div>
+                    <div>
+                        <label for="sell-contact-email" class="text-[10px] uppercase tracking-widest text-gray-500 block mb-2">Correo Electrónico</label>
+                        <input type="email" id="sell-contact-email" name="correo" class="contact-input" placeholder="correo@empresa.com" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-brand text-black font-bold uppercase tracking-widest hover:bg-white transition-all duration-300">
+                    Enviar Propuesta de Venta
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- END: Buy/Sell Section -->
+
     <!-- BEGIN: Contact Section -->
     <section id="contacto" class="py-24 max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
@@ -509,6 +660,7 @@
                     <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-6 border-b border-brand/20 pb-2 inline-block">Navegación</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#">Catálogo Flota</a></li>
+                        <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#compra-venta">Compra/Venta</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#">Proyectos</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#contacto">Contacto</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#">Cotizar Equipo</a></li>
