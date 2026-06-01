@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const arrow = document.getElementById('gallery-arrow');
 
     if (toggleBtn && gallery && arrow) {
-        // Inicializar atributos de accesibilidad
-        toggleBtn.setAttribute('aria-expanded', 'false');
+        // Inicializar atributos de accesibilidad (Abierto por defecto)
+        toggleBtn.setAttribute('aria-expanded', 'true');
         toggleBtn.setAttribute('aria-controls', 'machinery-gallery');
-        gallery.setAttribute('aria-hidden', 'true');
+        gallery.setAttribute('aria-hidden', 'false');
+        arrow.style.transform = 'rotate(180deg)';
 
         toggleBtn.addEventListener('click', () => {
             const isVisible = gallery.classList.toggle('visible');
