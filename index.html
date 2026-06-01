@@ -81,6 +81,7 @@
             <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase">
                 <a class="hover:text-brand transition-colors" href="#">Catálogo</a>
                 <a class="hover:text-brand transition-colors" href="#compra-venta">Compra/Venta</a>
+                <a class="hover:text-brand transition-colors" href="#filosofia">Nosotros</a>
                 <a class="hover:text-brand transition-colors" href="#">Proyectos</a>
                 <a class="hover:text-brand transition-colors" href="#contacto">Contacto</a>
             </div>
@@ -102,6 +103,7 @@
             <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg border-b border-white/10 py-6 px-6 flex flex-col gap-4">
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#">Catálogo</a>
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#compra-venta">Compra/Venta</a>
+                <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#filosofia">Nosotros</a>
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#">Proyectos</a>
                 <a class="text-lg font-medium hover:text-brand py-2 border-b border-white/5 transition-colors" href="#contacto">Contacto</a>
                 <button class="w-full mt-2 py-3 bg-brand text-black font-bold rounded-custom hover:bg-brand-light transition-all text-xs uppercase tracking-widest">
@@ -240,6 +242,60 @@
         </div>
     </main>
     <!-- END: Category Grid -->
+
+    <!-- BEGIN: DNA Section (Philosophy) -->
+    <section id="filosofia" class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left text intro -->
+            <div class="lg:col-span-4">
+                <span class="text-brand uppercase tracking-[0.3em] text-sm block mb-4">ADN Corporativo</span>
+                <h2 class="text-3xl sm:text-4xl font-bold leading-tight uppercase mb-6">COMPROMISO Y<br><span class="text-brand">PROPÓSITO.</span></h2>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Nuestra filosofía se cimenta en la excelencia operativa, la seguridad absoluta y el cumplimiento inquebrantable para impulsar el desarrollo de infraestructura en todo México.
+                </p>
+            </div>
+            
+            <!-- Cards Grid -->
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="glass-card p-8 rounded-custom relative overflow-hidden flex flex-col justify-between group">
+                    <div class="absolute -right-4 -bottom-4 text-7xl font-black text-white/5 group-hover:text-brand/10 transition-colors uppercase select-none pointer-events-none">ADN</div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold tracking-wide uppercase">Misión</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Brindar servicios integrales de construcción y movimiento de tierras mediante el uso de maquinaria pesada especializada, ofreciendo soluciones eficientes en excavaciones, terracerías, construcción de caminos, explotación y trituración de materiales pétreos, así como en la ejecución de obra pública y privada. Nos comprometemos a trabajar con calidad, seguridad, responsabilidad y cumplimiento, contribuyendo al desarrollo de infraestructura y al crecimiento de nuestros clientes y comunidades.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="glass-card p-8 rounded-custom relative overflow-hidden flex flex-col justify-between group">
+                    <div class="absolute -right-4 -bottom-4 text-7xl font-black text-white/5 group-hover:text-brand/10 transition-colors uppercase select-none pointer-events-none">ADN</div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center text-brand shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold tracking-wide uppercase">Visión</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Ser una empresa líder y reconocida en el sector de maquinaria pesada y construcción, destacando por nuestra capacidad operativa, innovación, confiabilidad y excelencia en cada proyecto de obra pública y privada. Buscamos consolidarnos como una referencia regional y nacional en trabajos de excavación, terracerías, caminos y bancos de materiales, manteniendo un crecimiento sostenible y un firme compromiso con la calidad y el desarrollo de nuestro equipo humano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- BEGIN: Interactive Section -->
     <section class="bg-surface-100 py-24 relative overflow-hidden">
@@ -661,6 +717,7 @@
                     <ul class="space-y-3 text-gray-400 text-sm">
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#">Catálogo Flota</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#compra-venta">Compra/Venta</a></li>
+                        <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#filosofia">Nosotros</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#">Proyectos</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#contacto">Contacto</a></li>
                         <li><a class="hover:text-brand hover:translate-x-1 inline-block transition-all duration-300" href="#">Cotizar Equipo</a></li>
