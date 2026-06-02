@@ -369,4 +369,273 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // === 6. BASE DE DATOS DE MAQUINARIA Y MODAL DETALLADO ===
+    const machineryData = {
+        'cat-d8t-2019': {
+            title: 'Tractor Caterpillar D8T',
+            tag: 'Venta',
+            year: '2019',
+            hours: '10,556.8 hrs',
+            description: 'Tractor Caterpillar D8T en excelentes condiciones operativas, motor Cat C15 de alto rendimiento, cabina cerrada climatizada con mandos joystick y ripper trasero de tres vástagos.',
+            price: '$608,000 USD NETO',
+            specs: {
+                'Motor': 'Cat C15 ACERT',
+                'Peso Operativo': '37.2 Ton',
+                'Potencia': '347 hp',
+                'Longitud': '7.8 metros',
+                'Altura': '3.4 metros',
+                'Ancho': '3.0 metros',
+                'Anchura Orugas': '711 mm',
+                'Equipamiento': 'Cabina Cerrada con A/C, Ripper trasero, Suspensión Neumática',
+                'Dirección': 'Mandos tipo Joystick',
+                'Ubicación': 'Texcoco'
+            },
+            images: [
+                'assets/caterpillar_d8t/1.jpeg',
+                'assets/caterpillar_d8t/2.jpeg',
+                'assets/caterpillar_d8t/3.jpeg',
+                'assets/caterpillar_d8t/4.jpeg',
+                'assets/caterpillar_d8t/5.jpeg',
+                'assets/caterpillar_d8t/6.jpeg',
+                'assets/caterpillar_d8t/7.jpeg',
+                'assets/caterpillar_d8t/8.jpeg',
+                'assets/caterpillar_d8t/9.jpeg',
+                'assets/caterpillar_d8t/10.jpeg',
+                'assets/caterpillar_d8t/11.jpeg',
+                'assets/caterpillar_d8t/12.jpeg',
+                'assets/caterpillar_d8t/13.jpeg',
+                'assets/caterpillar_d8t/14.jpeg'
+            ]
+        },
+        'cat-d8t-2022': {
+            title: 'Tractor Caterpillar D8T',
+            tag: 'Venta',
+            year: '2022',
+            hours: '3,851.7 hrs',
+            description: 'Tractor Caterpillar D8T seminuevo con muy pocas horas de uso. Equipado con motor C15, cadenas al 85% de vida útil, cuchilla tipo U de alta capacidad y cabina cerrada climatizada.',
+            price: '$708,000 USD NETO',
+            specs: {
+                'Motor': 'Cat C15 ACERT',
+                'Peso Operativo': '37.2 Ton',
+                'Potencia': '347 hp',
+                'Longitud': '7.8 metros',
+                'Altura': '3.4 metros',
+                'Ancho': '3.0 metros',
+                'Anchura Orugas': '711 mm',
+                'Estado Cadenas': '85% de vida útil',
+                'Cuchilla': 'Tipo U (MAQUINARIA: General)',
+                'Equipamiento': 'Cabina Cerrada con A/C, Suspensión Neumática',
+                'Dirección': 'Mandos tipo Joystick',
+                'Ubicación': 'Texcoco'
+            },
+            images: [
+                'assets/caterpillar_d8t_2/1.jpeg',
+                'assets/caterpillar_d8t_2/2.jpeg',
+                'assets/caterpillar_d8t_2/3.jpeg',
+                'assets/caterpillar_d8t_2/4.jpeg',
+                'assets/caterpillar_d8t_2/5.jpeg',
+                'assets/caterpillar_d8t_2/6.jpeg',
+                'assets/caterpillar_d8t_2/7.jpeg',
+                'assets/caterpillar_d8t_2/8.jpeg',
+                'assets/caterpillar_d8t_2/9.jpeg',
+                'assets/caterpillar_d8t_2/10.jpeg',
+                'assets/caterpillar_d8t_2/11.jpeg',
+                'assets/caterpillar_d8t_2/12.jpeg',
+                'assets/caterpillar_d8t_2/13.jpeg'
+            ]
+        }
+    };
+
+    // Referencias del Modal
+    const specModal = document.getElementById('spec-modal');
+    const modalCloseBtn = document.getElementById('modal-close');
+    const modalSlides = document.getElementById('modal-carousel-slides');
+    const modalIndicators = document.getElementById('modal-carousel-indicators');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    const modalTag = document.getElementById('modal-tag');
+    const modalTitle = document.getElementById('modal-title');
+    const modalSubtitle = document.getElementById('modal-subtitle');
+    const modalDesc = document.getElementById('modal-description');
+    const modalSpecsTable = document.getElementById('modal-specs-table');
+    const modalPrice = document.getElementById('modal-price');
+    const inquireBtn = document.getElementById('modal-inquire-btn');
+
+    let currentSlide = 0;
+    let currentImages = [];
+    let activeId = null;
+
+    // Actualizar posición del Carrusel
+    function updateCarousel() {
+        if (!modalSlides) return;
+        modalSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Actualizar indicadores
+        const dots = modalIndicators.querySelectorAll('.carousel-indicator');
+        dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    // Inicializar navegación del Carrusel
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentImages.length <= 1) return;
+            currentSlide = (currentSlide - 1 + currentImages.length) % currentImages.length;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentImages.length <= 1) return;
+            currentSlide = (currentSlide + 1) % currentImages.length;
+            updateCarousel();
+        });
+    }
+
+    // Abrir Modal
+    function openModal(id) {
+        const data = machineryData[id];
+        if (!data) return;
+
+        activeId = id;
+        currentSlide = 0;
+        currentImages = data.images;
+
+        // Rellenar información de textos
+        if (modalTag) modalTag.textContent = data.tag;
+        if (modalTitle) modalTitle.textContent = data.title;
+        if (modalSubtitle) modalSubtitle.textContent = `Año: ${data.year} | Horas: ${data.hours}`;
+        if (modalDesc) modalDesc.textContent = data.description;
+        if (modalPrice) modalPrice.textContent = data.price;
+
+        // Rellenar tabla técnica
+        if (modalSpecsTable) {
+            modalSpecsTable.innerHTML = '';
+            Object.entries(data.specs).forEach(([key, value]) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <th class="font-bold text-white uppercase tracking-wider text-[10px] w-[35%] align-top text-left">${key}</th>
+                    <td class="text-gray-400 text-xs">${value}</td>
+                `;
+                modalSpecsTable.appendChild(tr);
+            });
+        }
+
+        // Crear slides de imágenes
+        if (modalSlides) {
+            modalSlides.innerHTML = '';
+            currentImages.forEach((imgSrc) => {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide';
+                slide.innerHTML = `<img src="${imgSrc}" alt="${data.title}" class="w-full h-full object-cover">`;
+                modalSlides.appendChild(slide);
+            });
+            modalSlides.style.transform = 'translateX(0)';
+        }
+
+        // Crear indicadores del Carrusel
+        if (modalIndicators) {
+            modalIndicators.innerHTML = '';
+            if (currentImages.length > 1) {
+                currentImages.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = `carousel-indicator ${index === 0 ? 'active' : ''}`;
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        currentSlide = index;
+                        updateCarousel();
+                    });
+                    modalIndicators.appendChild(dot);
+                });
+                if (prevBtn) prevBtn.style.display = 'flex';
+                if (nextBtn) nextBtn.style.display = 'flex';
+            } else {
+                if (prevBtn) prevBtn.style.display = 'none';
+                if (nextBtn) nextBtn.style.display = 'none';
+            }
+        }
+
+        // Mostrar Backdrop
+        if (specModal) {
+            specModal.classList.add('active');
+            document.body.classList.add('overflow-hidden');
+        }
+    }
+
+    // Cerrar Modal
+    function closeModal() {
+        if (specModal) {
+            specModal.classList.remove('active');
+            document.body.classList.remove('overflow-hidden');
+        }
+        activeId = null;
+    }
+
+    // Event listeners para abrir modal en clics de tarjetas o botones
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-open-modal]');
+        if (trigger) {
+            e.preventDefault();
+            const id = trigger.getAttribute('data-open-modal');
+            openModal(id);
+        }
+    });
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
+
+    if (specModal) {
+        specModal.addEventListener('click', (e) => {
+            if (e.target === specModal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Escuchar tecla Esc para cerrar modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Acción de "Me interesa este equipo" (Pre-llenar contacto)
+    if (inquireBtn) {
+        inquireBtn.addEventListener('click', () => {
+            if (!activeId) return;
+            const data = machineryData[activeId];
+            if (!data) return;
+
+            closeModal();
+
+            const messageInput = document.getElementById('contact-message');
+            if (messageInput) {
+                // Pre-llenar textarea
+                messageInput.value = `Hola, estoy interesado en adquirir el equipo: ${data.title} (${data.tag}, Año ${data.year}, con ${data.hours} de uso) anunciado en ${data.price}. Solicito ficha técnica completa e información para proceder.`;
+                
+                // Desplazamiento suave al formulario
+                const contactSection = document.getElementById('contacto');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Focalizar primer campo del formulario tras scroll
+                    setTimeout(() => {
+                        const nameInput = document.getElementById('contact-name');
+                        if (nameInput) {
+                            nameInput.focus();
+                        }
+                    }, 800);
+                }
+            }
+        });
+    }
 });
